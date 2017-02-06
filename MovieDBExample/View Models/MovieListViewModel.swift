@@ -79,5 +79,15 @@ class MovieListViewModel: MovieListProtocol {
             break
         }
     }
+    
+    func showMovieDetail(atIndex: Int) {
+        
+        let movie = self.movies[atIndex]
+
+        AppNavigator.navigator.navigateTo(destination: MovieDetailViewController(),
+                                 navigationType: .push,
+                                 viewModel: MovieDetailViewModel(withMovie: movie))
+        
+    }
 
 }

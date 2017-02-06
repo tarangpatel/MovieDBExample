@@ -8,9 +8,13 @@
 
 import UIKit
 
-class MovieDetailViewController: UIViewController {
+class MovieDetailViewController: UIViewController, ViewControllerProtocol {
 
-    var viewModel: MovieDetailViewModel!
+    var viewModel: ViewModelProtocol! {
+        didSet {
+            print("View model is set")
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

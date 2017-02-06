@@ -33,6 +33,10 @@
 		2D3103F91E4398A80032A988 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3103F71E4398A80032A988 /* MovieViewModel.swift */; };
 		2D3103FB1E439C310032A988 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3103FA1E439C310032A988 /* UIImageView+Download.swift */; };
 		2D3103FC1E439C310032A988 /* UIImageView+Download.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3103FA1E439C310032A988 /* UIImageView+Download.swift */; };
+		2DB043E81E49078F00D3449F /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB043E71E49078F00D3449F /* NetworkConstants.swift */; };
+		2DB043E91E49078F00D3449F /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB043E71E49078F00D3449F /* NetworkConstants.swift */; };
+		2DB043EB1E49187A00D3449F /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB043EA1E49187A00D3449F /* ViewControllerProtocol.swift */; };
+		2DB043EC1E49187A00D3449F /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB043EA1E49187A00D3449F /* ViewControllerProtocol.swift */; };
 		2DD876651E45242F00D540CA /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD876641E45242F00D540CA /* MovieDetailViewController.swift */; };
 		2DD876661E45242F00D540CA /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD876641E45242F00D540CA /* MovieDetailViewController.swift */; };
 		2DD876681E45243E00D540CA /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD876671E45243E00D540CA /* MovieDetailViewModel.swift */; };
@@ -85,6 +89,8 @@
 		2D3103F11E4379E10032A988 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		2D3103F71E4398A80032A988 /* MovieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		2D3103FA1E439C310032A988 /* UIImageView+Download.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Download.swift"; sourceTree = "<group>"; };
+		2DB043E71E49078F00D3449F /* NetworkConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		2DB043EA1E49187A00D3449F /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
 		2DD876641E45242F00D540CA /* MovieDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
 		2DD876671E45243E00D540CA /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		2DD8766B1E4525D200D540CA /* AppNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppNavigator.swift; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				2D3103DC1E4242980032A988 /* NetworkService.swift */,
+				2DB043E71E49078F00D3449F /* NetworkConstants.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -206,6 +213,7 @@
 		2D3103D11E42425F0032A988 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				2DB043EA1E49187A00D3449F /* ViewControllerProtocol.swift */,
 				2D3103D21E42425F0032A988 /* HomeViewController.swift */,
 				2D3103F11E4379E10032A988 /* MovieTableViewCell.swift */,
 				2DD876641E45242F00D540CA /* MovieDetailViewController.swift */,
@@ -216,9 +224,9 @@
 		2D3103D31E42425F0032A988 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				2D3103EB1E427B6C0032A988 /* Dynamic.swift */,
 				2D3103E21E4267520032A988 /* MovieListViewModel.swift */,
 				2D3103F71E4398A80032A988 /* MovieViewModel.swift */,
-				2D3103EB1E427B6C0032A988 /* Dynamic.swift */,
 				2DD876671E45243E00D540CA /* MovieDetailViewModel.swift */,
 				2DD8766E1E4526AA00D540CA /* ViewModelProtocol.swift */,
 			);
@@ -438,11 +446,13 @@
 				2D3103DD1E4242980032A988 /* NetworkService.swift in Sources */,
 				2D3103EC1E427B6C0032A988 /* Dynamic.swift in Sources */,
 				2D3103D41E42425F0032A988 /* HomeViewController.swift in Sources */,
+				2DB043EB1E49187A00D3449F /* ViewControllerProtocol.swift in Sources */,
 				2D3103E31E4267520032A988 /* MovieListViewModel.swift in Sources */,
 				2DD876651E45242F00D540CA /* MovieDetailViewController.swift in Sources */,
 				2DD876681E45243E00D540CA /* MovieDetailViewModel.swift in Sources */,
 				2D3103A11E423CCC0032A988 /* AppDelegate.swift in Sources */,
 				2D3103E91E426A030032A988 /* Movies.swift in Sources */,
+				2DB043E81E49078F00D3449F /* NetworkConstants.swift in Sources */,
 				2D3103E61E4267890032A988 /* Movie.swift in Sources */,
 				2DD8766C1E4525D200D540CA /* AppNavigator.swift in Sources */,
 				2D3103F31E4379E10032A988 /* MovieTableViewCell.swift in Sources */,
@@ -460,11 +470,13 @@
 				2D3103DE1E4242980032A988 /* NetworkService.swift in Sources */,
 				2D3103ED1E427B6C0032A988 /* Dynamic.swift in Sources */,
 				2D3103D51E42425F0032A988 /* HomeViewController.swift in Sources */,
+				2DB043EC1E49187A00D3449F /* ViewControllerProtocol.swift in Sources */,
 				2D3103E41E4267520032A988 /* MovieListViewModel.swift in Sources */,
 				2DD876661E45242F00D540CA /* MovieDetailViewController.swift in Sources */,
 				2DD876691E45243E00D540CA /* MovieDetailViewModel.swift in Sources */,
 				2D3103B61E423CCC0032A988 /* MovieDBExampleTests.swift in Sources */,
 				2D3103EA1E426A030032A988 /* Movies.swift in Sources */,
+				2DB043E91E49078F00D3449F /* NetworkConstants.swift in Sources */,
 				2D3103E71E4267890032A988 /* Movie.swift in Sources */,
 				2DD8766D1E4525D200D540CA /* AppNavigator.swift in Sources */,
 				2D3103F41E4379E10032A988 /* MovieTableViewCell.swift in Sources */,

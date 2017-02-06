@@ -9,10 +9,46 @@
 import Foundation
 import UIKit
 
-class AppNavigator {
+enum NavigationType {
     
-    func pushViewTo<T: ViewModelProtocol>(viewController: UIViewController, withViewModel:T) {
+    case push
+    case pop
+    case modal
+    case show
+}
+
+protocol AppNavigatorProtocol {
+    
+    associatedtype ViewModelType
+    
+    func navigateTo(destination: ViewControllerProtocol, navigationType: NavigationType, viewModel: ViewModelType)
+}
+
+class AppNavigator: AppNavigatorProtocol {
+    
+    static let navigator = AppNavigator(window: ((UIApplication.shared.delegate?.window)!)!)
+    let storyboard: UIStoryboard
+    let navigationController: UINavigationController
+    
+    init(window: UIWindow) {
+        self.storyboard = UIStoryboard(name: "Main", bundle: nil)
+        self.navigationController = window.rootViewController as! UINavigationController
+    }
+    
+    func navigateTo(destination: ViewControllerProtocol, navigationType: NavigationType, viewModel: ViewModelProtocol) {
         
+        var vc = self.storyboard.instantiateViewController(withIdentifier: destination.className) as! ViewControllerProtocol
+        vc.viewModel = viewModel
+        
+        print(destination.className)
+        
+        switch navigationType {
+        case .push:
+            self.navigationController.pushViewController(vc as! UIViewController, animated: true)
+            break
+        default:
+            break
+        }
     }
     
 }

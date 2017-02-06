@@ -24,7 +24,7 @@ class MovieViewModel {
         self.movieRating = "\(model.vote_average ?? 0)"
         self.movieTitle = model.original_title ?? "N/A"
         self.movieReleaseDate = model.release_date ?? "N/A"
-        self.moviewImageURL = "https://image.tmdb.org/t/p/w500\(model.poster_path ?? "")"
+        self.moviewImageURL = Api.imageURL500Base + "\(model.poster_path ?? "")"
     }
 
 }
