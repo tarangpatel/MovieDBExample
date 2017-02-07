@@ -19,9 +19,10 @@ enum NavigationType {
 
 protocol AppNavigatorProtocol {
     
+    associatedtype ViewControllerType
     associatedtype ViewModelType
     
-    func navigateTo(destination: ViewControllerProtocol, navigationType: NavigationType, viewModel: ViewModelType)
+    func navigateTo(destination: ViewControllerType, navigationType: NavigationType, viewModel: ViewModelType)
 }
 
 class AppNavigator: AppNavigatorProtocol {

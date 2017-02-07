@@ -34,6 +34,7 @@ class MovieListViewModel: MovieListProtocol {
     var totalPages: Dynamic<Int>
     var totalResults: Dynamic<Int>
     
+    let movieListStore = MovieListStore()
 
     init() {
         self.dates = Dynamic([String: Any]())
@@ -44,12 +45,11 @@ class MovieListViewModel: MovieListProtocol {
     
     func getMovieList(_ apiType: MovieApiType) {
         
-        NetworkService().get(apiUrl: apiType, request: nil)
-        { [unowned self] response in
+        self.movieListStore.getMovies(apiType) { [unowned self] response in
             
             switch response {
             case .Success(let result):
-            
+                
                 guard let list = result.results else { return }
                 self.movies = list
                 
@@ -63,7 +63,7 @@ class MovieListViewModel: MovieListProtocol {
     }
     
     
-    func segmentSelected(type: Int) {
+    func segmentSelected(type: String) {
      
         switch  type {
             
