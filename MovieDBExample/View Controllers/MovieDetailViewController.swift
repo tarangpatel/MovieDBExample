@@ -11,13 +11,28 @@ import UIKit
 class MovieDetailViewController: UIViewController, ViewControllerProtocol {
 
     var viewModel: ViewModelProtocol! {
-        didSet {
-            print("View model is set")
+        didSet{
+            self._viewModel = viewModel as! MovieDetailViewModel
         }
+    }
+    
+    var _viewModel: MovieDetailViewModel
+
+    
+    init() {
+        self._viewModel = MovieDetailViewModel(withMovie: Movie(JSON: [:])!)
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        self._viewModel = MovieDetailViewModel(withMovie: Movie(JSON: [:])!)
+        super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = _viewModel.movie.original_title
     }
     
 }

@@ -9,6 +9,7 @@
 import UIKit
 
 protocol ViewControllerProtocol {
+    
     var viewModel: ViewModelProtocol! { get set }
 }
 

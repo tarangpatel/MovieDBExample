@@ -63,7 +63,7 @@ class MovieListViewModel: MovieListProtocol {
     }
     
     
-    func segmentSelected(type: String) {
+    func segmentSelected(type: Int) {
      
         switch  type {
             
